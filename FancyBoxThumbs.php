@@ -35,7 +35,7 @@ $wgExtensionCredits['other'][] = array(
     'url'         => 'http://www.mediawiki.org/wiki/Extension:FancyBoxThumbs',
     'author'      => '[http://www.gilluminate.com Jason Gill]',
     'description' => 'Displays thumbnailed images in a Mac-style "lightbox" that floats overtop of web page. A simple and fancy lightbox alternative',
-    'version'     => '1.0.1'
+    'version'     => '1.0.2'
 );
  
 $wgHooks['BeforePageDisplay'][] = 'efBeforePageDisplay';
