@@ -39,9 +39,34 @@ $wgExtensionCredits['other'][] = array(
 );
  
 $wgHooks['BeforePageDisplay'][] = 'efBeforePageDisplay';
- 
+ $wgHooks['GetPreferences'][] = 'getPreferences';
+
+
+
+function getPreferences( $user, &$defaultPreferences ) {
+	$preferences = array(
+				'usefancybox' => array(
+					'type' => 'toggle',
+					'label-message' => 'fancybox-preference',
+					'section' => 'rendering/files',
+				),
+				);
+		foreach ( $preferences as $key => $options ) {
+					$defaultPreferences[$key] = $options;
+				}
+	return true;
+	}
+	
+	
+	
 function efBeforePageDisplay($out)
 {	
+	$value=true;
+
+	global $wgUser;
+	if ( $wgUser->getOption( 'usefancybox' ) != $value ) {
+						return false;
+						}
     global $wgScriptPath, $wgTitle, $wgRequest;
 	
 	// Don't load if in the Special namespace (to prevent clobbering Semantic Forms or other extensions that load jQuery).
