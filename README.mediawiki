@@ -1,0 +1,11 @@
+The '''FancyBoxThumbs''' extension displays thumbnailed images in a Mac-style "lightbox" that floats overtop of web page. Gallery support added to version 0.7. Please test it and let me know how well it works for you in the discussions.
+
+== Installation ==
+# [https://github.com/gilluminate/FancyBoxThumbs/archive/master.zip Download the .zip file]
+# Extract the files to your <code>extensions</code> directory
+# Rename <code>gilluminate-FancyBoxThumbs-xxxxxx</code> to <code>FancyBoxThumbs</code>
+# Add to the end of [[Manual:LocalSettings.php|LocalSettings.php]]: <syntaxhighlight lang="php" enclose="div">require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");</syntaxhighlight>
+# Installation can now be verified through [[Special:Version]] on your wiki
+
+== Sites using this extension ==
+* [[Extension:FancyBoxThumbs/Sites using this extension|see here]]
