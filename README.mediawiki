@@ -6,6 +6,3 @@ The '''FancyBoxThumbs''' extension displays thumbnailed images in a Mac-style "l
 # Rename <code>gilluminate-FancyBoxThumbs-xxxxxx</code> to <code>FancyBoxThumbs</code>
 # Add to the end of [[Manual:LocalSettings.php|LocalSettings.php]]: <syntaxhighlight lang="php" enclose="div">require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");</syntaxhighlight>
 # Installation can now be verified through [[Special:Version]] on your wiki
-
-== Sites using this extension ==
-* [[Extension:FancyBoxThumbs/Sites using this extension|see here]]
