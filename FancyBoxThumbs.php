@@ -11,6 +11,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	echo( "This file is part of an extension to the MediaWiki software and cannot be used standalone.\n" );
 	die( 1 );
 }
+
+$fbtFancyBoxOptions = "{}";
  
 //Register Credits
 $wgExtensionCredits['media'][] = array(
@@ -22,15 +24,17 @@ $wgExtensionCredits['media'][] = array(
 );
 
 $wgResourceModules['ext.FancyBoxThumbs'] = array(
-	'scripts' => array('fancybox/jquery.fancybox-1.3.4.js','FancyBoxThumbs.js'),
-	'styles' => 'fancybox/jquery.fancybox-1.3.4.css',
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'FancyBoxThumbs',
+	'scripts' => array('fancyBox/source/jquery.fancybox.js','ext.FancyBoxThumbs.js'),
+	'styles' => 'fancyBox/source/jquery.fancybox.css',
+	'localBasePath' => dirname( __FILE__ ).'/modules',
+	'remoteExtPath' => 'FancyBoxThumbs/modules',
 );
 
 $wgHooks['BeforePageDisplay'][] = 'fbtBeforePageDisplay';
 
 function fbtBeforePageDisplay(&$out){
+	global $fbtFancyBoxOptions;
 	$out->addModules( 'ext.FancyBoxThumbs' );
+	$out->addInlineScript('var fbtFancyBoxOptions = '.$fbtFancyBoxOptions.';');
 	return true;
 }
