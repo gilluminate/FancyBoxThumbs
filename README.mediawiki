@@ -1,6 +1,16 @@
+== Overview ==
+
 The '''FancyBoxThumbs''' extension displays thumbnailed images in a Mac-style "lightbox" that floats overtop of web page. This can create a more user friendly environment, where the user doesn't leave the page every time they click a thumbnail.
 
 [http://gilluminate.com/mediawiki/index.php?title=Main_Page Example]
+
+== Version 2.0 ==
+
+* Version 2 was completely re-written. 
+* Takes advantage of [http://www.mediawiki.org/wiki/ResourceLoader ResourceLoader]
+* Makes better use of JQuery for the URL rewrite.
+* Upgraded to [http://fancyapps.com/fancybox/#news fancyBox v2]
+* Provides ability to customize [http://fancyapps.com/fancybox/#docs fancyBox options]
 
 == Licenses ==
 This Extension is released under the [http://www.gnu.org/licenses/gpl.html GPLv3] license.
@@ -14,11 +24,11 @@ You can get the author's permission to use fancyBox for commercial websites by [
 # [https://github.com/gilluminate/FancyBoxThumbs/archive/master.zip Download the .zip file]
 # Extract the files to your <code>extensions</code> directory
 # Rename <code>gilluminate-FancyBoxThumbs-xxxxxx</code> to <code>FancyBoxThumbs</code>
-# Add to the end of <code>LocalSettings.php</code>: <pre>require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");</pre>
+# Add to the end of [http://www.mediawiki.org/wiki/Manual:LocalSettings.php LocalSettings.php]: <pre>require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");</pre>
 # Installation can now be verified through <code>Special:Version</code> page on your wiki
 
 == Options ==
-You can set [http://fancyapps.com/fancybox/#docs fancyBox options] by setting a <code>$fbtFancyBoxOptions</code> variable in <code>LocalSettings.php</code> _after_ setting the <code>require_once</code> above.
+You can set [http://fancyapps.com/fancybox/#docs fancyBox options] by setting a <code>$fbtFancyBoxOptions</code> variable in [http://www.mediawiki.org/wiki/Manual:LocalSettings.php LocalSettings.php] _after_ setting the <code>require_once</code> above.
 
 For example:
 
