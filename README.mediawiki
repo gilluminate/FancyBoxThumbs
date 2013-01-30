@@ -1,5 +1,7 @@
 The '''FancyBoxThumbs''' extension displays thumbnailed images in a Mac-style "lightbox" that floats overtop of web page. This can create a more user friendly environment, where the user doesn't leave the page every time they click a thumbnail.
 
+[http://gilluminate.com/mediawiki/index.php?title=Main_Page Example]
+
 == Licenses ==
 This Extension is released under the [http://www.gnu.org/licenses/gpl.html GPLv3] license.
 
