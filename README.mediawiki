@@ -1,8 +1,24 @@
 The '''FancyBoxThumbs''' extension displays thumbnailed images in a Mac-style "lightbox" that floats overtop of web page. Gallery support added to version 0.7. Please test it and let me know how well it works for you in the discussions.
 
+== Licenses ==
+This Extension is released under the [http://www.gnu.org/licenses/gpl.html GPLv3] license.
+
+This project includes fancyBox JQuery Extension
+fancyBox is licensed under [http://creativecommons.org/licenses/by-nc/3.0/ Creative Commons Attribution-NonCommercial 3.0] license.
+You are free to use fancyBox for your personal or non-profit website projects. 
+You can get the author's permission to use fancyBox for commercial websites by [http://fancyapps.com/store/ paying a fee].
+
 == Installation ==
 # [https://github.com/gilluminate/FancyBoxThumbs/archive/master.zip Download the .zip file]
 # Extract the files to your <code>extensions</code> directory
 # Rename <code>gilluminate-FancyBoxThumbs-xxxxxx</code> to <code>FancyBoxThumbs</code>
-# Add to the end of <code>LocalSettings.php</code>: <code>require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");</code>
-# Installation can now be verified through Special:Version page on your wiki
+# Add to the end of <code>LocalSettings.php</code>: <pre>require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");</pre>
+# Installation can now be verified through <code>Special:Version</code> page on your wiki
+
+== Options ==
+You can set [http://fancyapps.com/fancybox/#docs fancyBox options] by setting a <code>$fbtFancyBoxOptions</code> variable in <code>LocalSettings.php</code> _after_ setting the <code>require_once</code> above.
+
+For example:
+
+<pre>require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
+$fbtFancyBoxOptions = '{"openEffect":"elastic","closeEffect":"elastic","helpers":{"title":{"type":"inside"}}}';</pre>

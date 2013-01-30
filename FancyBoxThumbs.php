@@ -1,11 +1,19 @@
 <?php
-/*
- * FancyBoxThumbs extension 2.0
- * Displays thumbnailed images in a Mac-style "lightbox" that floats overtop of web page.
- *
- * by [http://www.gilluminate.com Jason Gill]
- *
+/**
+ * FancyBoxThumbs MediaWiki Extension
+ * @version 2.0
+ * @example at http://gilluminate.com/mediawiki/
+ * @author [http://www.gilluminate.com Jason Gill]
+ * @license [http://www.gnu.org/licenses/gpl.html GPLv3]
 */
+
+/**
+ * fancyBox - jQuery Plugin
+ * @version: 2.1.4 (Thu, 17 Jan 2013)
+ * @example at http://fancyapps.com/fancybox/
+ * @license www.fancyapps.com/fancybox/#license
+ * @copyright Copyright 2012 Janis Skarnelis - janis@fancyapps.com
+ */
 
 if ( !defined( 'MEDIAWIKI' ) ) {
 	echo( "This file is part of an extension to the MediaWiki software and cannot be used standalone.\n" );
