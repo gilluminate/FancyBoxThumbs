@@ -28,7 +28,7 @@ You can get the author's permission to use fancyBox for commercial websites by [
 # Installation can now be verified through <code>Special:Version</code> page on your wiki
 
 == Options ==
-You can set [http://fancyapps.com/fancybox/#docs fancyBox options] by setting a <code>$fbtFancyBoxOptions</code> variable in [http://www.mediawiki.org/wiki/Manual:LocalSettings.php LocalSettings.php] _after_ setting the <code>require_once</code> above.
+You can set [http://fancyapps.com/fancybox/#docs fancyBox options] by setting a <code>$fbtFancyBoxOptions</code> variable in [http://www.mediawiki.org/wiki/Manual:LocalSettings.php LocalSettings.php] ''after'' setting the <code>require_once</code> above.
 
 For example:
 
