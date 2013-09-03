@@ -22,7 +22,13 @@
         }
 
         //attach new path to this link
-        $(this).attr("href", new_img_src).attr("rel", "group").addClass('fancybox');
+        var title = $(this).attr("title") || $(this).next(".thumbcaption").text();
+        title = (title !== "")?title + " - ":"";
+        $(this)
+          .data("fancybox-href", new_img_src)
+          .data("fancybox-title", title + '<a href="' + $(this).attr("href") + '">more info</a>')
+          .attr("rel", "group")
+          .addClass('fancybox');
     });
 
     //now set fancybox on all thumbnail links
