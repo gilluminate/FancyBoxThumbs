@@ -27,12 +27,12 @@
 
         //attach new path to this link
         if(is_gallery){
-            img_title = $(this).attr("title") || $(this).parents('.thumb').next('.gallerytext').html();
+            img_title = $(this).find('img').attr("alt") || $(this).parents('.thumb').next('.gallerytext').find('p').html().trim();
             $(this).attr("rel", "group")
         } else {
-            img_title = $(this).attr("title") || $(this).next(".thumbcaption").text().trim();
-            img_title = (img_title !== "")?img_title + " - ":"";
+            img_title = $(this).find('img').attr("alt") || $(this).next(".thumbcaption").text().trim();
         }
+        img_title = (img_title !== "")?img_title + " - ":"";
         $(this)
           .data("fancybox-href", new_img_src)
           .data("fancybox-title", img_title + '<a href="' + $(this).attr("href") + '">more info</a>')
