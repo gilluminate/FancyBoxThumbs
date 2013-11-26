@@ -1,7 +1,7 @@
 <?php
 /**
  * FancyBoxThumbs MediaWiki Extension
- * @version 2.0
+ * @version 2.1
  * @example at http://gilluminate.com/mediawiki/
  * @author [http://www.gilluminate.com Jason Gill]
  * @license [http://www.gnu.org/licenses/gpl.html GPLv3]
@@ -28,7 +28,7 @@ $wgExtensionCredits['media'][] = array(
     'url'         => 'http://www.mediawiki.org/wiki/Extension:FancyBoxThumbs',
     'author'      => '[http://www.gilluminate.com Jason Gill]',
     'description' => 'Displays thumbnailed images in a Mac-style "lightbox" that floats overtop of web page. A simple and fancy lightbox alternative',
-    'version'     => '2.0'
+    'version'     => '2.1'
 );
 
 $wgResourceModules['ext.FancyBoxThumbs'] = array(
