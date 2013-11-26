@@ -25,14 +25,17 @@
             new_img_src = img_src_parts.toString().replace(/\,/g, "/");
         }
 
-        //attach new path to this link
+        //attach alt or caption as title
         if(is_gallery){
             img_title = $(this).find('img').attr("alt") || $(this).parents('.thumb').next('.gallerytext').find('p').html().trim();
+            //set up for fancybox gallery
             $(this).attr("rel", "group")
         } else {
             img_title = $(this).find('img').attr("alt") || $(this).next(".thumbcaption").text().trim();
         }
         img_title = (img_title !== "")?img_title + " - ":"";
+
+        //add info to anchor tag for discovery by fancybox
         $(this)
           .data("fancybox-href", new_img_src)
           .data("fancybox-title", img_title + '<a href="' + $(this).attr("href") + '">more info</a>')
