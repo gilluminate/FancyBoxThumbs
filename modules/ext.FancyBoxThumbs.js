@@ -2,7 +2,11 @@
     //remove the link to the file:image page and replace it with a link to the original file to be displayed inside the fancybox modal window.
     $("a.image").each(function () {
         "use strict";
-        var img_src_parts, new_img_src, orig_img_src = $(this).find('img').attr("src");
+        var img_src_parts,
+            new_img_src,
+            img_title,
+            is_gallery = $(this).parents('.gallery').length,
+            orig_img_src = $(this).find('img').attr("src");
 
         //break up the image link into an array
         img_src_parts = orig_img_src.split("/");
@@ -22,12 +26,16 @@
         }
 
         //attach new path to this link
-        var title = $(this).attr("title") || $(this).next(".thumbcaption").text();
-        title = (title !== "")?title + " - ":"";
+        if(is_gallery){
+            img_title = $(this).attr("title") || $(this).parents('.thumb').next('.gallerytext').html();
+            $(this).attr("rel", "group")
+        } else {
+            img_title = $(this).attr("title") || $(this).next(".thumbcaption").text().trim();
+            img_title = (img_title !== "")?img_title + " - ":"";
+        }
         $(this)
           .data("fancybox-href", new_img_src)
-          .data("fancybox-title", title + '<a href="' + $(this).attr("href") + '">more info</a>')
-          .attr("rel", "group")
+          .data("fancybox-title", img_title + '<a href="' + $(this).attr("href") + '">more info</a>')
           .addClass('fancybox');
     });
 
